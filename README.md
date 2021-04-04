@@ -137,6 +137,7 @@ Then run the commands:
 > 'npm install'
 > 'npm update'
 ```
+
 ```sh
 Installation and configuration in a new project
 
@@ -186,6 +187,7 @@ Installation and configuration in a new project
     }
 }
 ```
+
 ```docker
 Generate docker container
 
@@ -196,7 +198,7 @@ Generate docker container
 	docker images
 
 # Run container
-	docker run --publish 3000:3000 agile
+    docker run --publish 3000:3000 agile
 
 # List containers
     docker ps
@@ -205,6 +207,7 @@ Generate docker container
     docker login
     docker push ch3ssmaster/agile:latest
 ```
+
 ```docker
 Run the proyect
 
@@ -213,8 +216,8 @@ Run the proyect
 # Download the container from Hub
     docker pull ch3ssmaster/agile
 
-# Run docker image
-	docker run -d -p 3000:3000 agile
+# Run docker container
+    docker run -d -p 3000:3000 agile
 
 # Open your favourite navigator and type the URL:
     http://localhost:3000/
@@ -222,6 +225,7 @@ Run the proyect
 2. From npm
     npm start
 ```
+
 ```
 Run the tests
 
@@ -235,30 +239,35 @@ Run the tests
     npm run c-open
 ```
 
-## Principios SOLID
+## SOLID Principles
 
-| Principio | Fichero |
-| :-------: | :-----: |
-|    ...    |   ...   |
-|    ...    |   ...   |
-|    ...    |   ...   |
+|       Principle       |                                             File                                              |
+| -------------------: | :------------------------------------------------------------------------------------------- |
+| Single-Responsibility | CheckSelection.tsx<br>Validate.tsx<br>SetAlertValues.js<br>RandomPassword.tsx<br>Validate.tsx |
+|      Open-closed      |                                      CheckSelection.tsx                                       |
+<br>
 
-## Patrones
+## Patterns
 
-| Patrón | Fichero | Método |
-| :----: | :-----: | :----: |
-|  ...   |   ...   |  ...   |
-|  ...   |   ...   |  ...   |
-|  ...   |   ...   |  ...   |
+| Patrón                | Fichero                   | Método           |
+| :-------------------- | :------------------------ | :--------------- |
+| Controlled Components | PasswordLengthSelector.js | PasswordLenght() |
+| React Hooks           | PasswordLengthSelector.js | PasswordLenght() |
+| Iterator              | RandomPassword.tsx        | password()       |
+| Mediator              | App.js                    | App()            |
+| Strategy              | Validate.tsx              | validate()       |
+| Facade                | CopyToClipboard.js        | CopyText()       |
+
+<br>
 
 ## Refactors
 
 | Refactor | Fichero | Método |
-| :------: | :-----: | :----: |
-|   ...    |   ...   |  ...   |
-|   ...    |   ...   |  ...   |
-|   ...    |   ...   |  ...   |
-
+| :------ | :----- | :---- |
+|   Extract Method    |   RandomPassword.tsx   |  checkSelection()<br>validate()   |
+|   Substitute Algorithm    |   CheckPassword.js   |  CheckPassword()   |
+|   Replace Array with Object    |   RandomPassword.tsx   |  password()   |
+<br>
 ## Notas
 
 ```
