@@ -43,6 +43,7 @@ Student: 'Antonio Cebrián Mesa'
 |                   Cypress | https://www.cypress.io/<BR>https://github.com/cypress-io/cypress/tree/master/npm/react              |
 |              Font Awesome | https://fontawesome.com/                                                                            |
 |   react-copy-to-clipboard | https://www.npmjs.com/package/react-copy-to-clipboard                                               |
+|   zxcvbn password strength | https://github.com/dropbox/zxcvbn      |
 | Docker Desktop on Windows | https://docs.docker.com/docker-for-windows/install/                                                 |
 
 <BR>
@@ -61,6 +62,7 @@ Student: 'Antonio Cebrián Mesa'
 | Cypress                   | 6.8.0                                              |
 | Font Awesome              | 5.15.3                                             |
 | react-copy-to-clipboard   | 5.0.3                                              |
+| zxcvbn   | 4.4.2                                              |
 | Docker Desktop on Windows | 20.10.5                                            |
 
 <BR>
@@ -186,6 +188,12 @@ Installation and configuration in a new project
       "types": ["cypress"]
     }
 }
+# Add zxcvbn password strength estimator
+    npm install zxcvbn
+    Include the library in the file where you want to validate the passwords: 
+    > const zxcvbn = require('zxcvbn');
+    Pass your password to the function.
+    > zxcvbn('t1p3H3r3Y0urP@$$word');
 ```
 
 ```docker
@@ -217,7 +225,7 @@ Run the proyect
     docker pull ch3ssmaster/agile
 
 # Run docker container
-    docker run -d -p 3000:3000 agile
+    docker run -d -p 3000:3000 ch3ssmaster/agile
 
 # Open your favourite navigator and type the URL:
     http://localhost:3000/
@@ -271,6 +279,5 @@ Run the tests
 
 ## Notas
 
-```
-Ponga aquí cualquier tipo de mensaje necesario.
-```
+Presentación del proyecto en youtube:
+[Agile bootcamp proyect](https://www.youtube.com/watch?v=sPCHJ6o3LHI)
