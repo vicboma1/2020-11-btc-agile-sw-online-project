@@ -198,7 +198,7 @@ Generate docker container
 	docker images
 
 # Run container
-    docker run --publish 3000:3000 agile
+    docker run --publish 3000:3000 ch3ssmaster/agile
 
 # List containers
     docker ps
@@ -268,6 +268,7 @@ Run the tests
 |   Substitute Algorithm    |   CheckPassword.js   |  CheckPassword()   |
 |   Replace Array with Object    |   RandomPassword.tsx   |  password()   |
 <br>
+
 ## Notas
 
 ```
